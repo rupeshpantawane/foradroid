@@ -5,17 +5,34 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const basename = path.basename(__filename);
 const app = require('../services/app.service');
-// const config = require(__dirname + '/../config/config.json')[app['env']];
+const config = require(__dirname + '/../config/config.json')[app['env']];
 
-const confighh = require('../config/config.json')
+// const confighh = require('../config/config.json')
 // console.log(config,confighh.production)
 const db = {};
+const database ="product"
+const username ="root"
+const password =""
+const configf = {
+  "username": "root",
+  "password": "",
+  "database": "product",
+  "host": "",
+  "port": 3306,
+  "dialect": "mysql",
+  "logging": false,
+  "poll": {
+    "max": 5,
+    "min": 0,
+    "idle": 10000
+  } 
+}
 
 var sequelize = new Sequelize(
-  confighh.production.database,
-  confighh.production.username,
-  confighh.production.password,
-  confighh.production
+  database,
+  username,
+  password,
+  configf
 );
 
 sequelize
