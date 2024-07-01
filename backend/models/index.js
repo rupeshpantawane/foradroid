@@ -5,14 +5,17 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const basename = path.basename(__filename);
 const app = require('../services/app.service');
-const config = require(__dirname + '/../config/config.json')[app['env']];
+// const config = require(__dirname + '/../config/config.json')[app['env']];
+
+const confighh = require('../config/config.json')
+// console.log(config,confighh.production)
 const db = {};
 
 var sequelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password,
-  config
+  confighh.production.database,
+  confighh.production.username,
+  confighh.production.password,
+  confighh.production
 );
 
 sequelize
