@@ -12,10 +12,10 @@ const app = require('../services/app.service');
 const db = {};
 const database ="product"
 const username ="root"
-const password =""
+const password ="root"
 const configf = {
   "username": "root",
-  "password": "",
+  "password": "root",
   "database": "product",
   "host": "",
   "port": 3306,
