@@ -6,7 +6,7 @@ const cors = require("cors");
 
 //Custome Plugins
 const config = require("./services/app.service");
-const adminRouter = require("./routes/admin.router");
+// const adminRouter = require("./routes/admin.router");
 // end 
 
 app.use(express.json({ limit: '25mb' }));
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 //User Routes
-app.use("/api/admin", adminRouter);
+// app.use("/api/admin", adminRouter);
 
 
 // simple route
