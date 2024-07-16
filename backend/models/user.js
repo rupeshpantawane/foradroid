@@ -1,6 +1,4 @@
 'use strict';
-const bcrypt = require("bcrypt");
-const bcrypt_p = require("bcrypt-promise");
 const { TE, to } = require("../services/util.service");
 const {
   Model
