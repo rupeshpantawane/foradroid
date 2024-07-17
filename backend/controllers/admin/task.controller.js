@@ -61,7 +61,7 @@ const getUsers = async function (req, res) {
         let data = await User.findAndCountAll({
             attributes: [
                 'id', 'age', 'location', 'salary', 'location', 'caste','height',
-                'education', 'marital_status', 'mobile', 'photo', 'gender','job'
+                'education', 'marital_status', 'mobile', 'photo', 'gender','job','expectation'
             ],
             where: {
                 ...ageName,
@@ -112,6 +112,7 @@ const createUser = async function (req, res) {
                 marital_status: body.marital_status== 'undefined'?null:body.marital_status?body.marital_status:null,
                 mobile: body.mobile?body.mobile:null,
                 gender: body.gender,
+                expectation: body.expectation,
                 job: body.job,
                 photo: relativePath?relativePath:null
                

@@ -37,6 +37,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    expectation: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     marital_status: {
       type: DataTypes.STRING,
       allowNull: true,

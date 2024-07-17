@@ -28,7 +28,7 @@ const getUserRelation = async function (req, res) {
         let data = await User.findAndCountAll({
             attributes: [
                 'id', 'age', 'location', 'salary', 'location', 'caste', 'height',
-                'education', 'marital_status', 'mobile', 'photo', 'gender', 'job'
+                'education', 'marital_status', 'mobile', 'photo', 'gender', 'job','expectation'
             ],
             include: [
                 {
@@ -43,7 +43,7 @@ const getUserRelation = async function (req, res) {
                             as: 'userListRelation',
                             attributes: [
                                 'id', 'age', 'location', 'salary', 'location', 'caste', 'height',
-                                'education', 'marital_status', 'mobile', 'photo', 'gender', 'job'
+                                'education', 'marital_status', 'mobile', 'photo', 'gender', 'job','expectation'
                             ],
                             required: false,
                         }
