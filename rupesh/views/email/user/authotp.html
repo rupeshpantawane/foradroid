@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <style>
+        /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+        /*All the styling goes here*/
+
+        img {
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%;
+        }
+
+        body {
+            background-color: #f6f6f6;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            font-variant: tabular-nums;
+            font-feature-settings: 'tnum', "tnum";
+            background-color: #f6f6f6;
+            width: 100%;
+        }
+
+        table {
+            border-collapse: separate;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            width: 100%;
+        }
+
+        table td {
+            font-family: sans-serif;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        /* This should also be a block element, so that it will fill 100% of the .container */
+        .content {
+            box-sizing: border-box;
+            display: block;
+            margin: 0 auto;
+            max-width: 580px;
+            padding: 10px;
+        }
+
+        /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+        .main {
+            background: #ffffff;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            padding: 30px;
+        }
+
+
+        /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        ol {
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+
+        a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+
+        .small-font {
+            font-size: 9px;
+        }
+    </style>
+</head>
+
+<body class="">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+        <tr>
+            <td>&nbsp;</td>
+            <td class="container">
+                <div class="content">
+                    <img src="<%= baseUrl %>/storage/email/email_banner.png">
+                    <!-- START CENTERED WHITE CONTAINER -->
+                    <table role="presentation" class="main">
+
+                        <!-- START MAIN CONTENT AREA -->
+                        <tr>
+                            <td class="wrapper">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <p style="font-size: 32px;font-weight: bold;">Verify your login</p>
+                                            <div>Hello  <%= name %>,</div>
+
+                                            <p>Below is OTP number (one time passcode) :</p>
+
+
+                                            <p style="font-size: 32px;font-weight: bold;color: #81cc43;"> <%= otp %></p>
+
+
+
+
+
+                                            <div>Please enter the code in 10 minutes.</pdiv>
+                                                <p>We're here to help if you need it. Visit
+                                                    <a href="#">Battlelab Support</a> for info or <a href="#">Contact
+                                                        us.</a>
+                                                </p>
+
+                                                <p>Best regards,</p>
+                                                <p style="font-weight:bold;">Battlelab Team</p>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- END MAIN CONTENT AREA -->
+                    </table>
+
+                    <table role="presentation" style="margin-top:25px; border-top: 1px solid #979494;">
+
+                        <!-- START MAIN CONTENT AREA -->
+                        <tr>
+                            <td class="" style="padding: 8px;">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <p class="small-font">If this wasn't you, please ignore this e-mail or
+                                                contact our customer service center: <a
+                                                    href="#">support@battlelab.gg</a> for further assistance.</p>
+
+                                            <!-- <div class="small-font align-center" style="text-align: center;">Copyright ©  <%= year %> Battlelab INC, All
+                                                rights reserved.</div> -->
+
+                                           
+
+                                            <p class="small-font align-center"  style="text-align: center;"><a href="#">About Battlelab</a> <a
+                                                    href="#">Contact us</a> </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- END MAIN CONTENT AREA -->
+                    </table>
+                    <!-- END CENTERED WHITE CONTAINER -->
+
+                    <!-- START FOOTER -->
+
+                    <!-- END FOOTER -->
+
+                </div>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</body>
+
+</html>
