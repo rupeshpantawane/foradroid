@@ -17,7 +17,6 @@ const RolePermissionController = require("../controllers/admin/rolepermission.co
 const RoleController = require("../controllers/admin/role.controller");
 const EmployeeController = require("../controllers/admin/employee.controller");
 const ProfileController = require("../controllers/admin/profile.controller");
-// const SimpleCrudController = require("../controllers/admin/simplecrud.controller");
 
 const SystemSetting = require("../controllers/admin/systemsetting.controller");
 
@@ -70,15 +69,5 @@ adminRouter.post("/update-user-language", ProfileController.updateLanguage);
 adminRouter.post("/fetch-system-setting", SystemSetting.fetchSystemSetting);
 adminRouter.post("/update-system-setting", SystemSetting.updateSystemSetting);
 // End System Setting Controller Start
-
-// Start SimpleCrudController
-// adminRouter.post("/fetch-simple-cruds", SimpleCrudController.fetchSimpleCrudsWithPeginate);
-// adminRouter.post("/create-simple-crud", SimpleCrudController.createSimpleCrud);
-// adminRouter.get("/fetch-simple-crud/:simple_crud_id", SimpleCrudController.fetchSimpleCrud);
-// adminRouter.post("/update-simple-crud", SimpleCrudController.updateSimpleCrud);
-// adminRouter.delete("/delete-simple-crud/:simple_crud_id", SimpleCrudController.deleteSimpleCrud);
-// adminRouter.post("/register",  SimpleCrudController.register);
-
-// End SimpleCrudController
 
 module.exports = adminRouter;
