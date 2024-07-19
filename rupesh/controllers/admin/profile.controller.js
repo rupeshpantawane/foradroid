@@ -2,10 +2,7 @@ var { User } = require("../../models");
 const authService = require("../../services/auth.service");
 const { to, ReE, ReS, TE } = require("../../services/util.service");
 const { Op } = require("sequelize");
-const bcrypt = require("bcrypt");
-const bcrypt_p = require('bcrypt-promise');
 const CONFIG = require("../../config/config.json");
-const jwt = require("jsonwebtoken");
 
 const updateProfile = async function (req, res) {
     try {
