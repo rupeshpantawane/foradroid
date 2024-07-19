@@ -72,12 +72,12 @@ adminRouter.post("/update-system-setting", SystemSetting.updateSystemSetting);
 // End System Setting Controller Start
 
 // Start SimpleCrudController
-adminRouter.post("/fetch-simple-cruds", SimpleCrudController.fetchSimpleCrudsWithPeginate);
-adminRouter.post("/create-simple-crud", SimpleCrudController.createSimpleCrud);
-adminRouter.get("/fetch-simple-crud/:simple_crud_id", SimpleCrudController.fetchSimpleCrud);
-adminRouter.post("/update-simple-crud", SimpleCrudController.updateSimpleCrud);
-adminRouter.delete("/delete-simple-crud/:simple_crud_id", SimpleCrudController.deleteSimpleCrud);
-adminRouter.post("/register",  SimpleCrudController.register);
+// adminRouter.post("/fetch-simple-cruds", SimpleCrudController.fetchSimpleCrudsWithPeginate);
+// adminRouter.post("/create-simple-crud", SimpleCrudController.createSimpleCrud);
+// adminRouter.get("/fetch-simple-crud/:simple_crud_id", SimpleCrudController.fetchSimpleCrud);
+// adminRouter.post("/update-simple-crud", SimpleCrudController.updateSimpleCrud);
+// adminRouter.delete("/delete-simple-crud/:simple_crud_id", SimpleCrudController.deleteSimpleCrud);
+// adminRouter.post("/register",  SimpleCrudController.register);
 
 // End SimpleCrudController
 
