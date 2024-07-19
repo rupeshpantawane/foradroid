@@ -27,7 +27,7 @@ const SystemSetting = require("../controllers/admin/systemsetting.controller");
 
 
 // Start Auth Controller
-adminRouter.post("/login", validator.loginValidation, errorHandler, AuthController.login);
+adminRouter.post("/login", AuthController.login);
 // End Auth Controller
 
 

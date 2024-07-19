@@ -6,7 +6,8 @@ const Op = Sequelize.Op;
 
 const fetchRoleModule = async function (req, res) {
     const body = req.body;
-    let role_id = req.user.role_id;
+    // let role_id = req.user.role_id;
+    let role_id = 1;
     try {
         let getmodule = await RoleModule.findAll({
             where: {
