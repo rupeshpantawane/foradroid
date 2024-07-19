@@ -1,7 +1,4 @@
 "use strict";
-
-const bcrypt = require("bcrypt");
-const bcrypt_p = require("bcrypt-promise");
 const { TE, to } = require("../services/util.service");
 
 const { Model } = require("sequelize");
@@ -98,48 +95,6 @@ module.exports = (sequelize, DataTypes) => {
       underscored: true //making underscored colomn as deletedAt to deleted_at
     }
   );
-
-  User.beforeSave(async (user, options) => {
-    let err;
-
-    if (user.changed("password")) {
-      let salt, hash;
-      [err, salt] = await to(bcrypt.genSalt(10));
-      if (err) TE(err.message, true);
-
-      [err, hash] = await to(bcrypt.hash(user.password, salt));
-      if (err) TE(err.message, true);
-
-      user.password = hash;
-    }
-  });
-
-  User.beforeUpdate(async (user, options) => {
-    let err;
-
-    if (user.changed("password")) {
-      let salt, hash;
-      [err, salt] = await to(bcrypt.genSalt(10));
-      if (err) TE(err.message, true);
-
-      [err, hash] = await to(bcrypt.hash(user.password, salt));
-      if (err) TE(err.message, true);
-
-      user.password = hash;
-    }
-  });
-
-  User.prototype.comparePassword = async function (pw) {
-    let err, pass;
-    if (!this.password) TE("password not set");
-
-    [err, pass] = await to(bcrypt_p.compare(pw, this.password));
-    if (err) TE(err);
-
-    if (!pass) TE("invalid password");
-
-    return this;
-  };
 
   User.associate = function (models) {
     User.belongsTo(models.UserRole, {
