@@ -3,7 +3,6 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const socketIo = require("socket.io");
 const fileupload = require('express-fileupload');
 
 // const i18n = require("i18n");
