@@ -1,0 +1,48 @@
+{
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "master_db",
+    "host": "",
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "poll": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    } 
+  },
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "master_db",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "poll": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "master_db",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false,
+    "poll": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
+  },
+  "jwt_encryption": "testingApp",
+  "jwt_expiration": "365d",
+  "stripePublishableKey": "pk_test_51MgoG8SIe1sHr0pQAv43pttNosJ7SDwLkmfvY5sHMioj7aWoPufFSJUa4tkS0mTJOXcXZXEBbOHuHMuPgM2wPJOV00obmiEBYW",
+  "stripeSecretKey": "sk_test_51MgoG8SIe1sHr0pQFpeRaK6N62cVy9rgho6yIDJZHx103mrRNfMuZ5L9fKx2di83QExrb2rgtOf1qVMTZ6bCQH6Z00X75xkKwZ"
+}

@@ -5,10 +5,7 @@
 
 # Node artifact files
 node_modules/
-config/config.json
-dist/
 storage/
-config/
 
 # Compiled Java class files
 *.class
