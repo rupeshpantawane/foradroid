@@ -17,10 +17,6 @@ const login = async function (req, res) {
 
   if (!checkUser) return ReE(res, { message: "Please enter the registered email address." }, 400);
 
-  const result = await bcrypt_p.compare(body.password, checkUser.password)
-  if (!result) return ReE(res, { message: "Invalid password." }, 400);
-  const token = jwt.sign({ user_id: checkUser.id, email: checkUser.email, user_type: 'admin' }, CONFIG.jwt_encryption, { expiresIn: '365d' });
-
   let userData = await User.findOne({
     include: [
       {
@@ -48,7 +44,7 @@ const login = async function (req, res) {
   for (var i = 0; i < settings.length; i++) {
     obj[settings[i]['config_key']] = settings[i]['config_value'];
   } 
-  return ReS(res, { user: userData, token: token, settings:obj  });
+  return ReS(res, { user: userData,  settings:obj  });
 };
 
 module.exports = {
