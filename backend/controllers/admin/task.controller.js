@@ -72,8 +72,8 @@ const getUsers = async function (req, res) {
                 ...idName,
                 gender:dataId.length === 0 ? body.gender:dataId[0].gender
             },
-            offset: (body.page - 1) * body.limit,
-            limit: body.limit,
+            // offset: (body.page - 1) * body.limit,
+            // limit: body.limit,
             order: [
                 ['id', 'DESC']
             ]
