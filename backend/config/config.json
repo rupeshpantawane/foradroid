@@ -1,7 +1,7 @@
 {
   "production": {
     "username": "root",
-    "password": "root",
+    "password": "",
     "database": "shadee",
     "host": "localhost",
     "port": 3306,
